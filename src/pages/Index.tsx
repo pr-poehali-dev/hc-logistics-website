@@ -211,13 +211,74 @@ const Index = () => {
             <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent mx-auto" />
           </div>
 
+          <div className="mb-20">
+            <Card className="bg-gradient-to-br from-[#0A1220] to-[#050A14] border-[#C9A961]/30 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C9A961]/5 to-transparent" />
+              <CardContent className="p-12 relative z-10">
+                <div className="max-w-4xl mx-auto">
+                  <h3 className="text-4xl font-bold text-white mb-8 text-center">H&C Group</h3>
+                  <p className="text-white/70 text-xl leading-relaxed mb-8 text-center">
+                    Многопрофильный холдинг, объединяющий передовые компании в ключевых отраслях экономики
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Truck" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Логистика</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Tv" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Медиа</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Building2" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Строительство</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="HeartPulse" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Медицина</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="ShieldCheck" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Безопасность</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Briefcase" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Консалтинг</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="GraduationCap" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Образование</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="ShoppingCart" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Торговля</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Factory" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Производство</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Zap" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">Двойное назначение</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-4 bg-[#050A14]/60 border border-[#C9A961]/20 rounded-xl">
+                      <Icon name="Laptop" size={24} className="text-[#C9A961] flex-shrink-0" />
+                      <span className="text-white/80 font-medium">IT-разработки</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8">
               <div>
                 <h3 className="text-4xl font-bold text-white mb-6">H&C Logistics</h3>
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
                   Мы являемся <span className="text-[#C9A961] font-semibold">5PL оператором логистики</span> с штаб-квартирой в Тюмени. 
-                  Наша компания входит в холдинг H&C Group, специализирующийся на логистике и медиа.
+                  Компания входит в состав многопрофильного холдинга H&C Group.
                 </p>
                 <p className="text-white/70 text-lg leading-relaxed">
                   Благодаря партнерским контрактам с федеральными 3PL и 2PL операторами, распределительными центрами, 
