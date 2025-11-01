@@ -281,6 +281,27 @@ const Career = () => {
                   />
                 </div>
 
+                <div className="bg-gradient-to-br from-[#0A1220] to-[#050A14] border border-[#C9A961]/30 rounded-xl p-6 mb-6">
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div className="flex-shrink-0">
+                      <img 
+                        src="https://cdn.poehali.dev/projects/b41d1d11-f90f-41e3-81fb-a9b3498f9ba3/files/15c0a8c0-2a48-4154-bf6a-beb8363b5dac.jpg"
+                        alt="Коко Де-ла-Серра"
+                        className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border-2 border-[#C9A961]/40"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-2">Коко Де-ла-Серра</h3>
+                      <p className="text-[#C9A961] font-semibold mb-3">Директор по персоналу H&C Group</p>
+                      <p className="text-white/70 text-sm leading-relaxed">
+                        «Мы ищем талантливых специалистов, готовых расти вместе с компанией. 
+                        H&C Group предоставляет уникальные возможности для профессионального развития 
+                        и карьерного роста в международной среде.»
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="bg-[#C9A961]/10 border border-[#C9A961]/30 rounded-xl p-4">
                   <div className="flex items-start space-x-3">
                     <Icon name="Info" size={20} className="text-[#C9A961] flex-shrink-0 mt-1" />
