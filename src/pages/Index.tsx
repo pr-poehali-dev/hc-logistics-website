@@ -494,18 +494,23 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-[#0A1220] to-[#050A14] border-[#C9A961]/30">
+              <Card className="bg-gradient-to-br from-[#0A1220] to-[#050A14] border-[#C9A961]/30 md:col-span-2">
                 <CardContent className="p-8">
-                  <div className="flex items-center space-x-6">
+                  <div className="flex flex-col md:flex-row md:items-start md:space-x-6 space-y-6 md:space-y-0">
                     <img 
                       src="https://cdn.poehali.dev/projects/b41d1d11-f90f-41e3-81fb-a9b3498f9ba3/files/0f0f5bcd-7bef-48e0-b0cb-23a38de0b58b.jpg" 
                       alt="Коко Де-ла-Серра" 
-                      className="w-24 h-24 rounded-2xl object-cover border-2 border-[#C9A961]/40 flex-shrink-0"
+                      className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border-2 border-[#C9A961]/40 flex-shrink-0"
                     />
-                    <div>
-                      <h4 className="text-xl font-bold text-white mb-2">Коко Де-ла-Серра</h4>
-                      <p className="text-[#C9A961] text-sm font-medium">Заместитель генерального директора</p>
-                      <p className="text-white/50 text-xs mt-1">Стратегическое планирование и операции</p>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-white mb-2">Коко Де-ла-Серра</h4>
+                      <p className="text-[#C9A961] text-base font-medium mb-1">Заместитель генерального директора</p>
+                      <p className="text-white/50 text-sm mb-6">Стратегическое планирование и ключевые операции</p>
+                      <div className="bg-[#050A14]/60 border-l-4 border-[#C9A961] p-4 rounded-r-xl">
+                        <p className="text-white/70 text-sm italic leading-relaxed">
+                          «Логистика — это не про грузовики и самолеты. Это искусство создавать реальность. Пообещай клиенту чудо — и сотвори его. Мир воюет политиками и солдатами, но побеждает тот, кто диктует, когда и где этот мир взорвется. Вся остальная болтовня — просто шум».
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
