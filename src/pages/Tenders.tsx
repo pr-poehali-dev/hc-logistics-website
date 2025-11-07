@@ -34,6 +34,8 @@ const ALLOWED_CREDENTIALS = [
   { inn: '7707083893', phone: '+79999876543' }
 ];
 
+const ADMIN_CODE = '72rus726zR#4-@1';
+
 const Tenders = () => {
   const { toast } = useToast();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -41,6 +43,9 @@ const Tenders = () => {
   const [showAuthError, setShowAuthError] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [showEmployeeLogin, setShowEmployeeLogin] = useState(false);
+  const [employeeCode, setEmployeeCode] = useState('');
+  const [showCodeError, setShowCodeError] = useState(false);
   
   const [userProfile] = useState<UserProfile>({
     companyName: 'ООО "Логистические Решения"',
@@ -77,6 +82,40 @@ const Tenders = () => {
       toast({
         title: "Доступ запрещен",
         description: "Обратитесь к администратору для получения доступа",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const handleEmployeeAuth = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (employeeCode === ADMIN_CODE) {
+      setIsAuthenticated(true);
+      setShowEmployeeLogin(false);
+      setShowWelcome(true);
+      setEmployeeCode('');
+      
+      if (navigator.vibrate) {
+        navigator.vibrate(50);
+      }
+      
+      toast({
+        title: "Вход выполнен",
+        description: "Добро пожаловать, сотрудник H&C Logistics",
+      });
+    } else {
+      setShowCodeError(true);
+      
+      if (navigator.vibrate) {
+        navigator.vibrate([100, 50, 100]);
+      }
+      
+      setTimeout(() => setShowCodeError(false), 600);
+      
+      toast({
+        title: "Неверный код",
+        description: "Проверьте правильность введенного кода администратора",
         variant: "destructive"
       });
     }
@@ -303,6 +342,64 @@ const Tenders = () => {
             </div>
           </CardContent>
         </Card>
+
+        <Button
+          onClick={() => setShowEmployeeLogin(true)}
+          className="fixed bottom-6 right-6 bg-gradient-to-r from-[#C9A961]/90 via-[#D4B574]/90 to-[#C9A961]/90 text-[#050A14] hover:shadow-xl hover:shadow-[#C9A961]/40 backdrop-blur z-50"
+          size="lg"
+        >
+          <Icon name="UserCog" size={20} className="mr-2" />
+          Сотрудник
+        </Button>
+
+        <Dialog open={showEmployeeLogin} onOpenChange={setShowEmployeeLogin}>
+          <DialogContent className={`bg-gradient-to-br from-[#0A1220] to-[#050A14] border-[#C9A961]/40 text-white transition-all duration-300 ${
+            showCodeError ? 'animate-shake border-red-500 shadow-xl shadow-red-500/50' : ''
+          }`}>
+            <DialogHeader>
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#C9A961]/20 to-[#D4B574]/20 border border-[#C9A961]/40 rounded-xl flex items-center justify-center">
+                  <Icon name="UserCog" size={32} className="text-[#C9A961]" />
+                </div>
+              </div>
+              <DialogTitle className="text-center text-2xl text-white">
+                Вход для сотрудников
+              </DialogTitle>
+              <DialogDescription className="text-center text-white/70">
+                Введите код администратора для доступа
+              </DialogDescription>
+            </DialogHeader>
+            
+            <form onSubmit={handleEmployeeAuth} className="space-y-6 pt-4">
+              <div className="space-y-2">
+                <Label htmlFor="employee-code" className="text-[#C9A961]">
+                  Код администратора <span className="text-red-400">*</span>
+                </Label>
+                <Input
+                  id="employee-code"
+                  type="password"
+                  value={employeeCode}
+                  onChange={(e) => setEmployeeCode(e.target.value)}
+                  required
+                  className={`bg-[#050A14] border-[#C9A961]/30 text-white focus:border-[#C9A961] transition-all ${
+                    showCodeError ? 'border-red-500 animate-pulse-red' : ''
+                  }`}
+                  placeholder="••••••••••••"
+                  autoComplete="off"
+                />
+              </div>
+
+              <Button 
+                type="submit"
+                size="lg"
+                className="w-full bg-gradient-to-r from-[#C9A961] via-[#D4B574] to-[#C9A961] text-[#050A14] hover:shadow-xl hover:shadow-[#C9A961]/30"
+              >
+                <Icon name="LogIn" size={20} className="mr-2" />
+                Войти
+              </Button>
+            </form>
+          </DialogContent>
+        </Dialog>
 
         <style>{`
           @keyframes shake {
