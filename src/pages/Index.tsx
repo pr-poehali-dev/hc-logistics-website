@@ -504,15 +504,21 @@ const Index = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="bg-gradient-to-br from-[#0A1220] to-[#050A14] border-[#C9A961]/30">
+              <Card className="bg-gradient-to-br from-[#0A1220] to-[#050A14] border-[#C9A961]/30 md:col-span-2">
                 <CardContent className="p-8">
-                  <div className="flex items-center space-x-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-[#C9A961]/20 to-[#D4B574]/20 border border-[#C9A961]/40 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <Icon name="User" size={40} className="text-[#C9A961]" />
+                  <div className="flex flex-col md:flex-row md:items-start md:space-x-6 space-y-6 md:space-y-0">
+                    <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#C9A961]/20 to-[#D4B574]/20 border-2 border-[#C9A961]/40 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Icon name="User" size={64} className="text-[#C9A961]" />
                     </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-white mb-2">Плесовских Илья Александрович</h4>
-                      <p className="text-[#C9A961] text-sm font-medium">Генеральный директор</p>
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-white mb-2">Плесовских Илья Александрович</h4>
+                      <p className="text-[#C9A961] text-base font-medium mb-1">Генеральный директор</p>
+                      <p className="text-white/50 text-sm mb-6">Основатель и руководитель компании</p>
+                      <div className="bg-[#050A14]/60 border-l-4 border-[#C9A961] p-4 rounded-r-xl">
+                        <p className="text-white/70 text-sm italic leading-relaxed">
+                          «Логистика — это не про доставку грузов. Это искусство быть судьбой».
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
