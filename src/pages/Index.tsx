@@ -528,7 +528,7 @@ const Index = () => {
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-start md:space-x-6 space-y-6 md:space-y-0">
                     <img 
-                      src="https://cdn.poehali.dev/projects/b41d1d11-f90f-41e3-81fb-a9b3498f9ba3/files/0f0f5bcd-7bef-48e0-b0cb-23a38de0b58b.jpg" 
+                      src="https://cdn.poehali.dev/projects/b41d1d11-f90f-41e3-81fb-a9b3498f9ba3/files/36fbfb20-db6b-4581-a67c-f9d8d96e71fe.jpg" 
                       alt="Коко Де-ла-Серра" 
                       className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border-2 border-[#C9A961]/40 flex-shrink-0"
                     />
